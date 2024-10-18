@@ -1,5 +1,5 @@
 from error import DivisionByZero
-from calculator import Calculator
+from Calculator import Calculator
 
 class Division (Calculator):
   def compute(self,a, b):
