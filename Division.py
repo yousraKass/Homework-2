@@ -1,8 +1,10 @@
 from error import DivisionByZero
+from calculator import Calculator
 
-def division(a, b):
-  if b == 0:
-    raise DivisionByZero("Attemp to divide by zero")
-  else:
-    return a / b
+class Division (Calculator):
+  def compute(self,a, b):
+    if b == 0:
+      raise DivisionByZero("Attemp to divide by zero")
+    else:
+      return a / b
 
