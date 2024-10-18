@@ -1,4 +1,4 @@
 from Calculator import Calculator
 class Subtraction(Calculator):
-    def execute(self, numberA, numberB):
+    def compute(self, numberA, numberB):
         return numberA - numberB
