@@ -1,8 +1,8 @@
 from flask import Flask, jsonify
-import Division
-import Addition
-import multiplication
-import Subtraction
+from Division import Division
+from Addition import Addition
+from multiplication import Multiplication
+from Subtraction import Subtraction
 
 app = Flask(__name__)
 
