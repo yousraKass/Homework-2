@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from Division import Division
 from Addition import Addition
+from error import DivisionByZero
 from multiplication import Multiplication
 from Subtraction import Subtraction
 
@@ -26,4 +27,9 @@ def multiply(a,b):
 @app.route('/divide/<int:a>/<int:b>', methods=['GET'])
 def divide(a,b):
     calculator = Division()
-    return jsonify({'status': 200, 'result': calculator.compute(a,b)})
+    try:
+        result = calculator.compute(a,b)
+    except DivisionByZero:
+        return jsonify({'status': 200, 'result': 'exception, dividing by zero'})
+        
+    return jsonify({'status': 200, 'result': result})
