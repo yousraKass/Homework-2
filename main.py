@@ -10,8 +10,8 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def main_page():
     return '''
-    <h1>Welcome to the Calculator</h1>
-    <p>To use the calculator you have to follow this format in the URL: /operation/a/b</p>
+    <h3>Welcome </h3>
+    <p>To use this calculator you have to follow this format in the URL: /operation/a/b</p>
     '''
 
 @app.route('/add/<int:a>/<int:b>', methods=['GET'])
